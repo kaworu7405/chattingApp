@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<VBox alignment="CENTER" minHeight="500.0" minWidth="800.0" spacing="20.0" xmlns="http://javafx.com/javafx/11.0.2" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.chattingapp.ChatController">
+   <children>
+      <GridPane minHeight="500.0" minWidth="800.0">
+        <columnConstraints>
+          <ColumnConstraints hgrow="SOMETIMES" maxWidth="606.0" minWidth="10.0" prefWidth="549.0" />
+          <ColumnConstraints hgrow="SOMETIMES" maxWidth="395.0" minWidth="10.0" prefWidth="251.0" />
+        </columnConstraints>
+        <rowConstraints>
+          <RowConstraints maxHeight="354.0" minHeight="10.0" prefHeight="317.0" vgrow="SOMETIMES" />
+          <RowConstraints maxHeight="245.0" minHeight="10.0" prefHeight="183.0" vgrow="SOMETIMES" />
+        </rowConstraints>
+         <children>
+            <TextArea fx:id="outputTxt" maxHeight="300.0" maxWidth="515.0" prefHeight="200.0" prefWidth="200.0">
+               <GridPane.margin>
+                  <Insets left="10.0" />
+               </GridPane.margin>
+            </TextArea>
+            <Button fx:id="sendBtn" minHeight="140.0" minWidth="80.0" mnemonicParsing="false" onAction="#onSendBtnClick" text="Send" GridPane.rowIndex="1">
+               <GridPane.margin>
+                  <Insets left="445.0" />
+               </GridPane.margin>
+            </Button>
+            <TextArea fx:id="inputTxt" maxHeight="140.0" maxWidth="430.0" prefHeight="200.0" prefWidth="200.0" GridPane.rowIndex="1">
+               <GridPane.margin>
+                  <Insets left="10.0" />
+               </GridPane.margin>
+            </TextArea>
+            <Label text="SERVER" GridPane.columnIndex="1">
+               <GridPane.margin>
+                  <Insets bottom="200.0" left="10.0" />
+               </GridPane.margin>
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </Label>
+            <TextField fx:id="serverTxt" maxWidth="220.0" text="homework.islab.work" GridPane.columnIndex="1">
+               <GridPane.margin>
+                  <Insets bottom="160.0" left="10.0" />
+               </GridPane.margin>
+            </TextField>
+            <TextField fx:id="portTxt" maxWidth="220.0" text="8080" GridPane.columnIndex="1">
+               <GridPane.margin>
+                  <Insets bottom="50.0" left="10.0" />
+               </GridPane.margin>
+            </TextField>
+            <Label text="PORT" GridPane.columnIndex="1">
+               <GridPane.margin>
+                  <Insets bottom="100.0" left="10.0" />
+               </GridPane.margin>
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </Label>
+            <Button fx:id="connectBtn" maxWidth="100.0" mnemonicParsing="false" onAction="#onConnectBtnClick" text="CONNECT" GridPane.columnIndex="1">
+               <GridPane.margin>
+                  <Insets left="80.0" top="20.0" />
+               </GridPane.margin>
+            </Button>
+            <Button fx:id="loginBtn" minWidth="80.0" mnemonicParsing="false" onAction="#OnLoginBtnClick" text="로그인" GridPane.columnIndex="1">
+               <GridPane.margin>
+                  <Insets left="165.0" top="120.0" />
+               </GridPane.margin>
+            </Button>
+            <Label text="Enjoy Your Chatting" GridPane.columnIndex="1" GridPane.rowIndex="1">
+               <GridPane.margin>
+                  <Insets bottom="150.0" left="80.0" />
+               </GridPane.margin></Label>
+            <Button fx:id="exchangeUKeyBtn" layoutX="573.0" layoutY="370.0" minWidth="200.0" mnemonicParsing="false" onAction="#OnExchangeUKeyBtnClick" text="공개키 교환" GridPane.columnIndex="1" GridPane.rowIndex="1">
+               <GridPane.margin>
+                  <Insets bottom="100.0" left="30.0" />
+               </GridPane.margin>
+            </Button>
+            <Button fx:id="exchangeKIBtn" layoutX="573.0" layoutY="400.0" minWidth="200.0" mnemonicParsing="false" onAction="#OnExchangeKIBtnClick" text="대칭암호키와 IV 교환" GridPane.columnIndex="1" GridPane.rowIndex="1">
+               <GridPane.margin>
+                  <Insets bottom="70.0" left="30.0" top="30.0" />
+               </GridPane.margin>
+            </Button>
+            <Button fx:id="logoutBtn" layoutX="573.0" layoutY="460.0" minWidth="200.0" mnemonicParsing="false" onAction="#onLogoutBtnBtnClick" text="로그아웃" GridPane.columnIndex="1" GridPane.rowIndex="1">
+               <GridPane.margin>
+                  <Insets bottom="100.0" left="30.0" top="180.0" />
+               </GridPane.margin>
+            </Button>
+            <Button fx:id="exchangeNewKIBtn" layoutX="589.0" layoutY="400.0" minWidth="200.0" mnemonicParsing="false" onAction="#OnExchangeNewKIBtnClick" text="대칭암호키와 IV 변경" GridPane.columnIndex="1" GridPane.rowIndex="1">
+               <GridPane.margin>
+                  <Insets bottom="40.0" left="30.0" top="60.0" />
+               </GridPane.margin>
+            </Button>
+            <Button fx:id="clearOutputTxtBtn" minWidth="200.0" mnemonicParsing="false" onAction="#onClearOutputTxtBtnClick" text="출력창 Clear" GridPane.columnIndex="1" GridPane.rowIndex="1">
+               <GridPane.margin>
+                  <Insets left="30.0" top="140.0" />
+               </GridPane.margin>
+            </Button>
+            <TextField fx:id="myId" layoutX="569.0" layoutY="134.0" maxWidth="150.0" GridPane.columnIndex="1">
+               <GridPane.margin>
+                  <Insets left="10.0" top="120.0" />
+               </GridPane.margin>
+            </TextField>
+            <Label layoutX="569.0" layoutY="110.0" text="My ID" GridPane.columnIndex="1">
+               <font>
+                  <Font size="15.0" />
+               </font>
+               <GridPane.margin>
+                  <Insets left="15.0" top="70.0" />
+               </GridPane.margin>
+            </Label>
+            <Label layoutX="574.0" layoutY="195.0" text="Friend ID" GridPane.columnIndex="1">
+               <font>
+                  <Font size="15.0" />
+               </font>
+               <GridPane.margin>
+                  <Insets left="15.0" top="180.0" />
+               </GridPane.margin>
+            </Label>
+            <TextField fx:id="friendId" layoutX="569.0" layoutY="219.0" maxWidth="150.0" GridPane.columnIndex="1">
+               <GridPane.margin>
+                  <Insets left="10.0" top="220.0" />
+               </GridPane.margin>
+            </TextField>
+            <Button fx:id="friendIdBtn" layoutX="724.0" layoutY="219.0" minWidth="80.0" mnemonicParsing="false" onAction="#OnfriendIdBtnClick" text="등록" GridPane.columnIndex="1">
+               <GridPane.margin>
+                  <Insets left="165.0" top="220.0" />
+               </GridPane.margin>
+            </Button>
+         </children>
+      </GridPane>
+   </children>
+</VBox>
